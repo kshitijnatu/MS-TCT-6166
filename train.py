@@ -64,7 +64,7 @@ if args.dataset == 'charades':
 
     train_split = './data/charades.json'
     test_split = train_split
-    rgb_root =  '/rgb_feat_rgb' 
+    rgb_root =  args.rgb_root if args.rgb_root != 'no_root' else '/rgb_feat_rgb' 
     flow_root = '/flow_feat_path/' # optional
     # rgb_of=[rgb_root,flow_root]
     classes = 157
