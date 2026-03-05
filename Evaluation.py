@@ -1,7 +1,7 @@
 import json
 import pickle
 from apmeter import APMeter
-import numpy as np
+import numpy as np # type: ignore
 from utils import *
 
 

@@ -1,13 +1,13 @@
 import time
 import argparse
 import csv
-from torch.autograd import Variable
+from torch.autograd import Variable # type: ignore
 import pickle
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torch.optim as optim
-import numpy as np
+import torch # type: ignore
+import torch.nn as nn # type: ignore
+import torch.nn.functional as F # type: ignore
+import torch.optim as optim # type: ignore
+import numpy as np # type: ignore
 import random
 from utils import *
 from apmeter import APMeter
