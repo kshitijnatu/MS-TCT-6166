@@ -1,5 +1,5 @@
 import json
-import pickle5 as pickle
+import pickle
 from apmeter import APMeter
 import numpy as np
 from utils import *
