@@ -1,3 +1,12 @@
+import warnings
+import os
+
+# Ignore the specific sklearn and torch noise
+warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+# This specifically stops sklearn's "UndefinedMetricWarning"
+os.environ["PYTHONWARNINGS"] = "ignore::UserWarning,ignore::UndefinedMetricWarning"
+
 import json
 import pickle
 from apmeter import APMeter
