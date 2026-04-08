@@ -113,6 +113,8 @@ def run(models, criterion, num_epochs=50):
                 print("epoch",epoch,"Best Val Map Update",Best_val_map)
                 pickle.dump(prob_val, open('./save_logit/' + str(epoch) + '.pkl', 'wb'), pickle.HIGHEST_PROTOCOL)
                 print("logit_saved at:","./save_logit/" + str(epoch) + ".pkl")
+                torch.save(model.state_dict(), './save_model/' + str(epoch) + '.pt')
+                print("model_saved at:","./save_model/" + str(epoch) + ".pt")
 
 
 def eval_model(model, dataloader, baseline=False):
@@ -231,6 +233,9 @@ if __name__ == '__main__':
 
     if not os.path.exists('./save_logit'):
         os.makedirs('./save_logit')
+
+    if not os.path.exists('./save_model'):
+        os.makedirs('./save_model')
 
     if args.train:
 
